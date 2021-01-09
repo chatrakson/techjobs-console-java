@@ -41,15 +41,21 @@ public class TechJobs {
                 } else {
 
                     ArrayList<String> results = JobData.findAll(columnChoice);
-//                    ArrayList<String> sortItem = new ArrayList<>();
+                    ArrayList<String> sortItem = new ArrayList<>();
 
                     System.out.println("\n*** All " + columnChoices.get(columnChoice) + " Values ***");
 
                     // Print list of skills, employers, etc
                     for (String item : results) {
-//                        sortItem.add(item);
+                        sortItem.add(item);
+                    }
+
+                    Collections.sort(sortItem);
+
+                    for (String item : sortItem) {
                         System.out.println(item);
                     }
+
                 }
 
             } else { // choice is "search"
